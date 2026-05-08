@@ -27,8 +27,8 @@ body{
   inset:0;
   background:linear-gradient(
     to right,
-    rgba(20,10,10,.85),
-    rgba(60,15,15,.55)
+    rgba(20,10,10,.78),
+    rgba(60,15,15,.35)
   );
 }
 
@@ -193,22 +193,48 @@ footer{
 
   .hero{
     min-height:88vh;
+    background-size:cover;
+    background-position:65% center;
+  }
+
+  .overlay{
+    background:linear-gradient(
+      to bottom,
+      rgba(30,8,8,.82),
+      rgba(40,8,8,.72)
+    );
   }
 
   .hero-content{
-    padding:40px 25px;
+    padding:60px 25px 50px;
+    max-width:100%;
+  }
+
+  .sub-title{
+    font-size:18px;
+    letter-spacing:3px;
   }
 
   .hero h1{
     font-size:56px;
+    line-height:1.15;
   }
 
   .hero h2{
-    font-size:26px;
+    font-size:28px;
+    line-height:1.5;
   }
 
   .description{
-    font-size:18px;
+    font-size:20px;
+    line-height:1.8;
+  }
+
+  .main-btn{
+    width:100%;
+    text-align:center;
+    font-size:20px;
+    padding:18px 20px;
   }
 
   .info-section{
@@ -224,7 +250,7 @@ footer{
   .intro-text h2,
   .merit-section h2,
   .cta-section h2{
-    font-size:32px;
+    font-size:34px;
   }
 
   .merit-section{
@@ -235,9 +261,4 @@ footer{
     grid-template-columns:1fr;
   }
 
-  .main-btn{
-    width:100%;
-    text-align:center;
-    font-size:20px;
-  }
 }
