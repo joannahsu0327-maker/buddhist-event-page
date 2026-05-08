@@ -5,22 +5,19 @@
 }
 
 body{
-  font-family:"Microsoft JhengHei";
+  font-family:"Microsoft JhengHei", sans-serif;
   background:#f8f2e8;
   color:#2c1b12;
   line-height:1.8;
 }
 
-/* HERO */
-
 .hero{
   position:relative;
   min-height:100vh;
-
-  background-image:url("../images/hero.jpg");
+  background-color:#3b0b0b;
+  background-image:url("../images/hero.webp");
   background-size:cover;
   background-position:center;
-
   display:flex;
   align-items:center;
 }
@@ -28,9 +25,7 @@ body{
 .overlay{
   position:absolute;
   inset:0;
-
-  background:
-  linear-gradient(
+  background:linear-gradient(
     to right,
     rgba(20,10,10,.85),
     rgba(60,15,15,.55)
@@ -40,7 +35,6 @@ body{
 .hero-content{
   position:relative;
   z-index:2;
-
   max-width:700px;
   padding:80px;
   color:white;
@@ -70,16 +64,11 @@ body{
 
 .main-btn{
   display:inline-block;
-
   background:#8c1717;
   color:white;
-
   padding:18px 42px;
-
   border-radius:999px;
-
   text-decoration:none;
-
   font-size:22px;
 }
 
@@ -87,14 +76,10 @@ body{
   background:#b78935;
 }
 
-/* INFO */
-
 .info-section{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-
   gap:20px;
-
   padding:60px 8%;
 }
 
@@ -105,14 +90,15 @@ body{
   border-radius:18px;
 }
 
-/* INTRO */
+.info-card h3{
+  color:#6f1212;
+  margin-bottom:8px;
+}
 
 .intro{
   display:grid;
   grid-template-columns:1fr 1fr;
-
   gap:40px;
-
   padding:80px 8%;
   align-items:center;
 }
@@ -123,12 +109,15 @@ body{
   margin-bottom:25px;
 }
 
+.intro-text p{
+  font-size:18px;
+}
+
 .intro-image img{
   width:100%;
   border-radius:20px;
+  display:block;
 }
-
-/* MERIT */
 
 .merit-section{
   padding:80px 8%;
@@ -159,15 +148,18 @@ body{
   width:100%;
   height:200px;
   object-fit:cover;
+  display:block;
 }
 
 .merit-card h3{
   margin-top:20px;
   font-size:28px;
+  color:#6f1212;
 }
 
 .merit-card p{
   margin:10px 0;
+  padding:0 12px;
 }
 
 .merit-card span{
@@ -175,8 +167,6 @@ body{
   color:#8c1717;
   font-weight:bold;
 }
-
-/* CTA */
 
 .cta-section{
   background:#5c1010;
@@ -188,9 +178,8 @@ body{
 .cta-section h2{
   font-size:42px;
   margin-bottom:30px;
+  color:#f1cf86;
 }
-
-/* FOOTER */
 
 footer{
   background:#2a0d0d;
@@ -199,9 +188,12 @@ footer{
   padding:40px 20px;
 }
 
-/* MOBILE */
-
+/* 手機版 */
 @media(max-width:900px){
+
+  .hero{
+    min-height:88vh;
+  }
 
   .hero-content{
     padding:40px 25px;
@@ -221,10 +213,22 @@ footer{
 
   .info-section{
     grid-template-columns:1fr;
+    padding:40px 6%;
   }
 
   .intro{
     grid-template-columns:1fr;
+    padding:60px 6%;
+  }
+
+  .intro-text h2,
+  .merit-section h2,
+  .cta-section h2{
+    font-size:32px;
+  }
+
+  .merit-section{
+    padding:60px 6%;
   }
 
   .merit-grid{
@@ -234,6 +238,6 @@ footer{
   .main-btn{
     width:100%;
     text-align:center;
+    font-size:20px;
   }
-
 }
